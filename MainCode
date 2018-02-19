@@ -1,0 +1,210 @@
+import time
+'''This program finds out which way to face a solar panel based on
+the tempuratures of 3 different pools of water that are fairly close
+to eachother
+'''
+
+#Finding out what the temperatures are:
+print('What is the temp of left pool?')
+time.sleep(1)
+temp1=int(input())
+print('What is the temp of middle pool?')
+time.sleep(1)
+temp2=int(input())
+print('What is the temp of right pool?')
+time.sleep(1)
+temp3=int(input())
+
+#Putting the temperatures into 2 lists:
+templist=[temp1,temp2,temp3]
+templistnew=[temp1,temp2,temp3]
+
+#Finding the highest temperature
+directiontemp=max(templist)
+
+#Editing the second list to have the highest temperature taken out
+if directiontemp == temp1:
+    templistnew.remove(temp1)
+elif directiontemp == temp2:
+    templistnew.remove(temp2)
+elif directiontemp == temp3:
+    templistnew.remove(temp3)
+
+#Finding the difference between the highest temperatures
+secondhigh = max(templistnew)
+roughdiff = directiontemp - secondhigh
+absdiff = abs(roughdiff)
+
+
+#Printing out statistics
+print()
+print('Statistics:')
+print('1. Max temp: ',directiontemp)   
+print('2. New list without max: ', templistnew)
+print('3. Second highest value: ', secondhigh)
+print('4. difference between top 2 temps: ',absdiff)
+
+
+templistnew.remove(max(templistnew))
+
+#Using the data to find which way the Solar panel should face
+print()
+print('Final result:')
+if templistnew[0] == temp3 and absdiff <=5:
+    if absdiff == 0 and temp3 != temp2:
+        print('Solar panel between middle and left (45 degrees)')
+        time.sleep(1)
+        print('Is this wrong?')
+        YorN=input()
+        if YorN == 'Yes' or 'yes':
+            print('What degrees should it be turned to?')
+            newinp==input()
+            print('Ok, changing orientation of the solar panel to ',newinp,' degrees')
+        elif YorN == 'No' or 'no':
+            print('The solar panel will stay at 45 degrees')
+
+            
+    elif absdiff == 1 and temp1>temp2:
+        print('Solar panel between middle and left (40 degrees)')
+        time.sleep(1)
+        print('Is this wrong?')
+        YorN=input()
+        if YorN == 'Yes' or 'yes':
+            print('What degrees should it be turned to?')
+            newinp==input()
+            print('Ok, changing orientation of the solar panel to ',newinp,' degrees')
+        elif YorN == 'No' or 'no':
+            print('The solar panel will stay at 45 degrees')
+
+            
+    elif absdiff == 2 and temp1>temp2:
+        print('Solar panel between middle and left (30 degrees)')
+        time.sleep(1)
+        print('Is this wrong?')
+        YorN=input()
+        if YorN == 'Yes' or 'yes':
+            print('What degrees should it be turned to?')
+            newinp==input()
+            print('Ok, changing orientation of the solar panel to ',newinp,' degrees')
+        elif YorN == 'No' or 'no':
+            print('The solar panel will stay at 45 degrees')
+
+            
+    elif absdiff == 3 and temp1>temp2:
+        print('Solar panel between middle and left (20 degrees)')
+        time.sleep(1)
+        print('Is this wrong?')
+        YorN=input()
+        if YorN == 'Yes' or 'yes':
+            print('What degrees should it be turned to?')
+            newinp==input()
+            print('Ok, changing orientation of the solar panel to ',newinp,' degrees')
+        elif YorN == 'No' or 'no':
+            print('The solar panel will stay at 45 degrees')
+
+            
+    elif absdiff == 4 and temp1>temp2:
+        print('Solar panel between middle and left (10 degrees)')
+        time.sleep(1)
+        print('Is this wrong?')
+        YorN=input()
+        if YorN == 'Yes' or 'yes':
+            print('What degrees should it be turned to?')
+            newinp==input()
+            print('Ok, changing orientation of the solar panel to ',newinp,' degrees')
+        elif YorN == 'No' or 'no':
+            print('The solar panel will stay at 45 degrees')
+
+            
+    elif absdiff == 1 and temp2>temp1:
+        print('Solar panel between middle and left (50 degrees)')
+        time.sleep(1)
+        print('Is this wrong?')
+        YorN=input()
+        if YorN == 'Yes' or 'yes':
+            print('What degrees should it be turned to?')
+            newinp==input()
+            print('Ok, changing orientation of the solar panel to ',newinp,' degrees')
+        elif YorN == 'No' or 'no':
+            print('The solar panel will stay at 45 degrees')
+
+            
+    elif absdiff == 2 and temp2>temp1:
+        print('Solar panel between middle and left (60 degrees)')
+        time.sleep(1)
+        print('Is this wrong?')
+        YorN=input()
+        if YorN == 'Yes' or 'yes':
+            print('What degrees should it be turned to?')
+            newinp==input()
+            print('Ok, changing orientation of the solar panel to ',newinp,' degrees')
+        elif YorN == 'No' or 'no':
+            print('The solar panel will stay at 45 degrees')
+
+            
+    elif absdiff == 3 and temp2>temp1:
+        print('Solar panel between middle and left (70 degrees)')
+        time.sleep(1)
+        print('Is this wrong?')
+        YorN=input()
+        if YorN == 'Yes' or 'yes':
+            print('What degrees should it be turned to?')
+            newinp==input()
+            print('Ok, changing orientation of the solar panel to ',newinp,' degrees')
+        elif YorN == 'No' or 'no':
+            print('The solar panel will stay at 45 degrees')
+
+            
+    elif absdiff == 4 and temp2>temp1:
+        print('Solar panel between middle and left (80 degrees)')
+        time.sleep(1)
+        print('Is this wrong?')
+        YorN=input()
+        if YorN == 'Yes' or 'yes':
+            print('What degrees should it be turned to?')
+            newinp==input()
+            print('Ok, changing orientation of the solar panel to ',newinp,' degrees')
+        elif YorN == 'No' or 'no':
+            print('The solar panel will stay at 45 degrees')
+
+            
+elif templistnew[0] == temp1 and absdiff <=5:
+    if absdiff == 0 and temp1 != temp2:
+        print('Solar panel between middle and right (135 degrees)')
+        time.sleep(1)
+        print('Is this wrong?')
+        YorN=input()
+        if YorN == 'Yes' or 'yes':
+            print('What degrees should it be turned to?')
+            newinp==input()
+            time.sleep(1)
+            print('Ok, changing orientation of the solar panel to ',newinp,' degrees')
+        elif YorN == 'No' or 'no':
+            time.sleep(1)
+            print('The solar panel will stay at 45 degrees')
+
+            
+    elif absdiff == 1 and temp3>temp2:
+        print('Solar panel between middle and right (140 degrees)')
+    elif absdiff == 2 and temp3>temp2:
+        print('Solar panel between middle and right (150 degrees)')
+    elif absdiff == 3 and temp3>temp2:
+        print('Solar panel between middle and right (160 degrees)')
+    elif absdiff == 4 and temp3>temp2:
+        print('Solar panel between middle and right (170 degrees)')
+    elif absdiff == 1 and temp2>temp3:
+        print('Solar panel between middle and left (130 degrees)')
+    elif absdiff == 2 and temp2>temp3:
+        print('Solar panel between middle and left (120 degrees)')
+    elif absdiff == 3 and temp2>temp3:
+        print('Solar panel between middle and left (110 degrees)')
+    elif absdiff == 4 and temp2>temp3:
+        print('Solar panel between middle and left (100 degrees)')
+if directiontemp == templist[1] and absdiff>5:
+    print('Solar panel face middle (90 degrees)')
+elif directiontemp == templist[0] and absdiff>5:
+    print('Solar panel face left (0 degrees)')
+elif directiontemp == templist[2] and absdiff>5:
+    print('Solar panel face right (180 degrees)')
+elif temp1 == temp2 and temp2 == temp3:
+    print('Solar panel is at max effiency')
